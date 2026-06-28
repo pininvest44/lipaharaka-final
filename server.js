@@ -30,7 +30,7 @@ app.post('/api/bulk-stk', async (req,res)=>{
    }catch(err){
      results.push({phone,reference,status:'FAILED',error:err.response?.data||err.message,time:new Date().toISOString()});
    }
-   await delay(2000);
+   await delay(3000);
  }
  res.json(results);
 });
